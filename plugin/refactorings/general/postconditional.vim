@@ -34,6 +34,12 @@ function! ConvertPostConditional()
   exec "normal jo" . "end"
   " move back to the line that you started at
   normal k
+
+  " remove trailing whitespace
+  normal $
+  normal x
+  normal ^
+
   " indent the conditional body
   normal >>
 endfunction
